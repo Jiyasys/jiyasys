@@ -1,0 +1,30 @@
+/* ==========================================
+   TECH CONSULTING PAGE
+   ========================================== */
+
+@import './SoftwareBuildingPage.css';
+
+.consulting-page .sw-hero-badge {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.consulting-page .sw-badge-dot {
+  background: #ff6b35;
+}
+
+.consulting-page .sw-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1200px) {
+    .consulting-page .sw-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .consulting-page .sw-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

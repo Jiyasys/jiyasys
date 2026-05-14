@@ -1,0 +1,246 @@
+.header {
+  display: flex;
+  height: 64px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: #fff;
+  align-items: stretch;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-left,
+.header-center,
+.header-nav,
+.header-right {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--border-color);
+}
+
+.header-left {
+  padding: 0 40px;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -1px;
+  display: flex;
+  align-items: flex-start;
+  color: var(--text-dark);
+}
+
+.jiyasys-logo {
+  max-height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.trademark {
+  font-size: 9px;
+  margin-top: 3px;
+  font-weight: 600;
+  color: var(--primary-red);
+}
+
+.header-center {
+  padding: 0 30px;
+  flex: 1;
+  justify-content: center;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-red);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(225, 29, 46, 0.4);
+}
+
+.time-text {
+  color: var(--text-dark);
+  font-variant-numeric: tabular-nums;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  height: 100%;
+}
+
+.nav-item {
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  border-right: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: var(--transition);
+  color: #444;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background-color: var(--bg-light);
+  color: var(--primary-red);
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+  color: var(--text-muted);
+}
+
+.nav-item:hover .chevron {
+  color: var(--primary-red);
+}
+
+.chevron.rotate {
+  transform: rotate(180deg);
+}
+
+/* Mega Menu Styles */
+.mega-menu {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mega-menu-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 48px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 48px;
+}
+
+.column-title {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.column-item {
+  margin-bottom: 14px;
+}
+
+.item-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-dark);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: var(--radius-btn);
+  margin-left: -16px;
+  transition: var(--transition);
+}
+
+.item-link:hover {
+  background-color: var(--bg-light);
+  color: var(--primary-red);
+  transform: translateX(8px);
+}
+
+.item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--bg-light);
+  border-radius: 10px;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.item-link:hover .item-icon {
+  background: var(--primary-red);
+  color: #fff;
+}
+
+.nav-item:last-child {
+  border-right: none;
+}
+
+.header-right {
+  border-right: none;
+  padding: 0 10px;
+}
+
+.contact-btn {
+  height: 44px;
+  padding: 0 32px;
+  background-color: var(--primary-red);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: var(--radius-btn);
+  margin-left: 20px;
+}
+
+.contact-btn:hover {
+  background-color: #c41928;
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(225, 29, 46, 0.3);
+}
+
+@media (max-width: 1024px) {
+
+  .header-center,
+  .nav-item {
+    padding: 0 20px;
+  }
+
+  .contact-btn {
+    padding: 0 24px;
+  }
+}

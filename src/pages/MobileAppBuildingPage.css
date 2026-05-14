@@ -1,0 +1,31 @@
+/* ==========================================
+   MOBILE APP BUILDING PAGE
+   (Reusing styles from Software Building)
+   ========================================== */
+
+@import './SoftwareBuildingPage.css';
+
+.mobile-page .sw-hero-badge {
+  background: var(--primary-red);
+  color: #fff;
+}
+
+.mobile-page .sw-badge-dot {
+  background: #000;
+}
+
+.mobile-page .sw-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1200px) {
+    .mobile-page .sw-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-page .sw-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

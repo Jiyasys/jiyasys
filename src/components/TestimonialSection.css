@@ -1,0 +1,256 @@
+.testimonial-section {
+  background-color: #f9f9f4;
+  padding: 60px 5%;
+  font-family: 'Inter', sans-serif;
+}
+
+.testimonial-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.testimonial-title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #111;
+  margin: 0;
+  flex: 1;
+}
+
+.testimonial-header-right {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonial-subtitle {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+
+.review-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #111;
+  padding-bottom: 2px;
+  align-self: flex-start;
+  transition: opacity 0.3s;
+}
+
+.review-link:hover {
+  opacity: 0.7;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f4;
+}
+
+/* Left Column */
+.testimonial-left {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.quote-box {
+  color: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  min-height: 320px;
+  transition: background-color 0.6s ease;
+}
+
+.quote-text {
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin: 0 0 25px 0;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.author-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.author-role {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.logo-strip-container {
+  overflow: hidden;
+  background-color: #f9f9f4;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo-strip-track {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: max-content;
+  animation: scrollMarquee 15s linear infinite;
+  padding-left: 60px; /* Offset gap for seamless loop */
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 30px)); } /* 50% width minus half gap */
+}
+
+.client-logo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+.client-logo.font-bold {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* Right Column */
+.testimonial-right {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f4;
+}
+
+.image-box {
+  position: relative;
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.slide-number-top {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+.slide-number-bottom {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+.slide-image {
+  width: 80%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px; /* Optional slight rounding, screenshot looks a bit stylized with a slanted corner but standard is fine for now */
+  clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%); /* Mimicking the angled corners from the screenshot */
+}
+
+.nav-box {
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 30px;
+}
+
+@media (max-width: 1024px) {
+  .testimonial-header {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .testimonial-header-right {
+    max-width: 100%;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-left {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-strip {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}

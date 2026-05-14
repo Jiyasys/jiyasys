@@ -1,0 +1,154 @@
+.careers-page {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.careers-hero {
+  padding: 120px 0 60px;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(225, 29, 46, 0.05), #fff);
+}
+
+.careers-hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.careers-hero .highlight {
+  color: var(--primary-red);
+}
+
+.careers-hero .subtitle {
+  font-size: 20px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.open-positions {
+  padding: 80px 0;
+}
+
+.jobs-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.job-card {
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  border-color: var(--primary-red);
+  box-shadow: 0 10px 30px rgba(225, 29, 46, 0.1);
+}
+
+.job-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.job-icon {
+  width: 48px;
+  height: 48px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.job-info h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.job-info p {
+  font-size: 14px;
+  color: #999;
+}
+
+.apply-btn {
+  padding: 12px 24px;
+  background: #f8f9fa;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.job-card:hover .apply-btn {
+  background: var(--primary-red);
+  color: #fff;
+}
+
+.benefits {
+  padding: 80px 0;
+  background: #fcfcfc;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.benefit-item {
+  padding: 40px;
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+}
+
+.benefit-item h4 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--primary-red);
+}
+
+.benefit-item p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .careers-hero h1 {
+    font-size: 40px;
+  }
+  
+  .job-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .apply-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

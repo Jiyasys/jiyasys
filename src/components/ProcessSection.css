@@ -1,0 +1,130 @@
+.process-scroll-container {
+  background-color: var(--bg-beige);
+  height: 300vh; /* Provides scroll space for the sequential animation */
+  position: relative;
+}
+
+.process-sticky-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+  overflow: hidden;
+}
+
+.process-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.process-card-col {
+  height: 100%;
+}
+
+.process-card {
+  height: 380px;
+  border-radius: 4px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-id {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.card-title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.card-description {
+  font-size: 15px;
+  line-height: 1.6;
+  z-index: 2;
+}
+
+.card-icon {
+  opacity: 0.8;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 2;
+}
+
+.card-learn-more {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.card-learn-more:hover {
+  opacity: 1;
+}
+
+.card-bg-number {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  font-size: 200px;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .process-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .process-card {
+    height: 500px;
+  }
+}
+
+@media (max-width: 640px) {
+  .process-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-card-col {
+    transform: none !important; /* Disable vertical animation on mobile for better UX */
+  }
+  
+  .process-card {
+    height: auto;
+    min-height: 350px;
+  }
+  
+  .process-title {
+    font-size: 36px;
+  }
+}

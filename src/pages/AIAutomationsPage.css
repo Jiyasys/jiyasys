@@ -1,0 +1,30 @@
+/* ==========================================
+   AI AUTOMATIONS PAGE
+   ========================================== */
+
+@import './SoftwareBuildingPage.css';
+
+.ai-page .sw-hero-badge {
+  background: #3b5eff;
+  color: #fff;
+}
+
+.ai-page .sw-badge-dot {
+  background: var(--primary-red);
+}
+
+.ai-page .sw-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1200px) {
+    .ai-page .sw-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-page .sw-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
