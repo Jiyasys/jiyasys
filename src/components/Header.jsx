@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Code, Smartphone, Cpu, BarChart, Users, Globe, Rocket, Shield, Cloud } from 'lucide-react';
+import { ChevronDown, Code, Smartphone, Cpu, BarChart, Users, Globe, Rocket, Shield, Cloud, Sun, Moon, Menu, X } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [time, setTime] = useState(new Date());
   const [activeMenu, setActiveMenu] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(localStorage.getItem('theme') === 'dark');
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -13,6 +15,19 @@ const Header = () => {
     const timer = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDark]);
+
+  const toggleTheme = () => setIsDark(!isDark);
+  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   const formatTime = (date) => {
     return date.toLocaleTimeString('en-US', {
@@ -96,11 +111,12 @@ const Header = () => {
         </div>
       </div>
 
-      <nav className="header-nav">
+      <nav className={`header-nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
         <ul className="nav-list">
           <li
             className={`nav-item ${activeMenu === 'services' ? 'active' : ''}`}
-            onMouseEnter={() => setActiveMenu('services')}
+            onMouseEnter={() => !mobileMenuOpen && setActiveMenu('services')}
+            onClick={() => mobileMenuOpen && setActiveMenu(activeMenu === 'services' ? null : 'services')}
           >
             <span>Services</span>
             <ChevronDown size={14} className={`chevron ${activeMenu === 'services' ? 'rotate' : ''}`} />
@@ -108,24 +124,25 @@ const Header = () => {
 
           <li
             className={`nav-item ${activeMenu === 'industries' ? 'active' : ''}`}
-            onMouseEnter={() => setActiveMenu('industries')}
+            onMouseEnter={() => !mobileMenuOpen && setActiveMenu('industries')}
+            onClick={() => mobileMenuOpen && setActiveMenu(activeMenu === 'industries' ? null : 'industries')}
           >
             <span>Industries</span>
             <ChevronDown size={14} className={`chevron ${activeMenu === 'industries' ? 'rotate' : ''}`} />
           </li>
           <li className="nav-item">
-            <Link to="/case-studies">Portfolio</Link>
+            <Link to="/case-studies" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
           </li>
           <li className="nav-item">
-            <Link to="/blog">Blogs</Link>
+            <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>Blogs</Link>
           </li>
           <li className="nav-item">
-            <Link to="/about">About Us</Link>
+            <Link to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
           </li>
         </ul>
 
         {activeMenu && (
-          <div className="mega-menu" onMouseEnter={() => setActiveMenu(activeMenu)}>
+          <div className="mega-menu" onMouseEnter={() => !mobileMenuOpen && setActiveMenu(activeMenu)}>
             <div className="mega-menu-content">
               {menuItems[activeMenu].columns.map((column, idx) => (
                 <div key={idx} className="mega-menu-column">
@@ -133,7 +150,7 @@ const Header = () => {
                   <ul className="column-list">
                     {column.items.map((item, i) => (
                       <li key={i} className="column-item">
-                        <Link to={item.path} className="item-link" onClick={() => setActiveMenu(null)}>
+                        <Link to={item.path} className="item-link" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>
                           {item.icon && <span className="item-icon">{item.icon}</span>}
                           <span className="item-name">{item.name}</span>
                         </Link>
@@ -148,7 +165,13 @@ const Header = () => {
       </nav>
 
       <div className="header-right">
-        <button className="contact-btn" onClick={() => navigate('/contact')}>Get Started</button>
+        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
+          {isDark ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
+        <button className="contact-btn" onClick={() => { navigate('/contact'); setMobileMenuOpen(false); }}>Get Started</button>
+        <button className="mobile-toggle" onClick={toggleMobileMenu}>
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
     </header>
   );

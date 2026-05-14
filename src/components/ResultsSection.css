@@ -153,6 +153,7 @@
 @media (max-width: 1024px) {
   .result-card {
     grid-template-columns: 1fr;
+    height: auto;
   }
 
   .results-header {

@@ -1,6 +1,8 @@
 .trusted-section {
   background-color: var(--bg-white);
   padding: 100px 40px;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .trusted-title-row {
@@ -36,6 +38,7 @@
   overflow: hidden;
   position: relative;
   width: 100%;
+  max-width: 100vw;
 }
 
 .marquee-track {

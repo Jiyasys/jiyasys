@@ -3,6 +3,12 @@
   padding: 100px 40px;
 }
 
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 60px 20px;
+  }
+}
+
 .pricing-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -23,6 +29,13 @@
   letter-spacing: -2px;
   color: var(--text-dark);
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .pricing-title {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
 }
 
 .pricing-toggle-wrapper {
@@ -319,12 +332,13 @@
   }
 
   .pricing-card {
-    padding: 16px;
+    padding: 24px 20px;
   }
 
   .pricing-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
+    gap: 24px;
+    margin-bottom: 40px;
   }
 }
