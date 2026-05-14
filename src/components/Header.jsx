@@ -165,9 +165,9 @@ const Header = () => {
       </nav>
 
       <div className="header-right">
-        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
+        {/* <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
           {isDark ? <Sun size={20} /> : <Moon size={20} />}
-        </button>
+        </button> */}
         <button className="contact-btn" onClick={() => { navigate('/contact'); setMobileMenuOpen(false); }}>Get Started</button>
         <button className="mobile-toggle" onClick={toggleMobileMenu}>
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
