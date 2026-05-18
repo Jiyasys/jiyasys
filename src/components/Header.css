@@ -419,16 +419,23 @@
   }
 
   .mega-menu {
-    position: static;
+    position: relative;
     width: 100%;
     box-shadow: none;
-    display: none;
-    padding: 0;
+    display: block !important;
+    padding: 16px 20px;
     animation: none;
+    background-color: #f4f3ed;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .mega-menu-banner {
+    display: none !important;
   }
 
   .nav-item.active .mega-menu {
-    display: block;
+    display: block !important;
   }
 
   .mega-menu-content {

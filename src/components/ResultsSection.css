@@ -151,9 +151,22 @@
 }
 
 @media (max-width: 1024px) {
+  .results-title {
+    font-size: 32px;
+  }
+
+  .results-subtitle {
+    font-size: 15px;
+  }
+
   .result-card {
     grid-template-columns: 1fr;
     height: auto;
+  }
+
+  .result-image-box {
+    height: 200px;
+    width: 100%;
   }
 
   .results-header {
@@ -163,6 +176,6 @@
   }
 
   .result-content {
-    padding: 12px;
+    padding: 24px 20px;
   }
 }

@@ -26,6 +26,24 @@ const Header = () => {
     }
   }, [isDark]);
 
+  // Scroll lock when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
+  // Auto-close menu and active dropdowns on location changes
+  useEffect(() => {
+    setActiveMenu(null);
+    setMobileMenuOpen(false);
+  }, [location]);
+
   const toggleTheme = () => setIsDark(!isDark);
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
