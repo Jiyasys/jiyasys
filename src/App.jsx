@@ -9,10 +9,11 @@ import TrustedSection from './components/TrustedSection';
 import ServicesSection from './components/ServicesSection';
 import ProcessSection from './components/ProcessSection';
 import ResultsSection from './components/ResultsSection';
-import PricingSection from './components/PricingSection';
 import TestimonialSection from './components/TestimonialSection';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
+import ServiceDetailPage from './components/ServiceDetailPage';
+import FAQSection from './components/FAQSection';
 
 // Page Imports
 import SoftwareBuildingPage from './pages/SoftwareBuildingPage';
@@ -60,12 +61,13 @@ function HomePage() {
       <Header />
       <main>
         <Hero />
+        <TrustedSection />
+        <ServicesSection />
         <ExpertiseHeader />
         <ProcessSection />
-        <TrustedSection />
 
         <ResultsSection />
-        <PricingSection />
+        <FAQSection />
         <TestimonialSection />
         <CTASection />
       </main>
@@ -94,6 +96,7 @@ function App() {
       <Route path="/cybersecurity" element={<CybersecurityPage />} />
       <Route path="/ui-ux-design" element={<UIUXDesignPage />} />
       <Route path="/hire-developers" element={<HireDeveloperPage />} />
+      <Route path="/service/:id" element={<ServiceDetailPage />} />
       
       {/* Industry Routes */}
       <Route path="/industry/fintech" element={<FintechPage />} />

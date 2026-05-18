@@ -10,14 +10,14 @@
 .contact-main .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 12px;
   align-items: start;
 }
 
 .contact-info h1 {
   font-size: 48px;
   font-weight: 800;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   line-height: 1.2;
 }
 
@@ -28,19 +28,19 @@
 .contact-info .description {
   font-size: 18px;
   color: #666;
-  margin-bottom: 48px;
+  margin-bottom: 12px;
 }
 
 .info-items {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 12px;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
 
 .icon-box {
@@ -70,7 +70,7 @@
 
 .contact-form-container {
   background: #fff;
-  padding: 40px;
+  padding: 12px;
   border-radius: 32px;
   border: 1px solid var(--border-color);
   box-shadow: 0 20px 40px rgba(0,0,0,0.03);
@@ -79,7 +79,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
 }
 
 .form-group {
@@ -97,7 +97,7 @@
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 16px;
+  padding: 12px;
   border-radius: 12px;
   border: 1px solid var(--border-color);
   font-size: 15px;
@@ -114,8 +114,8 @@
 }
 
 .submit-btn {
-  margin-top: 10px;
-  padding: 18px;
+  margin-top: 12px;
+  padding: 12px;
   background: var(--primary-red);
   color: #fff;
   border: none;
@@ -138,12 +138,12 @@
 
 @media (max-width: 992px) {
   .contact-main {
-    padding: 80px 20px 60px;
+    padding: 12px 20px 12px;
   }
 
   .contact-main .grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 12px;
   }
 
   .contact-info h1 {
@@ -152,6 +152,6 @@
   }
 
   .contact-form-container {
-    padding: 32px 20px;
+    padding: 12px 20px;
   }
 }

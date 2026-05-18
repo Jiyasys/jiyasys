@@ -5,12 +5,12 @@
 .case-detail-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 120px 20px 80px;
+  padding: 12px 20px 12px;
 }
 
 .case-detail-header {
   max-width: 800px;
-  margin-bottom: 60px;
+  margin-bottom: 12px;
 }
 
 .back-link {
@@ -21,7 +21,7 @@
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
   transition: color 0.2s;
 }
 
@@ -38,7 +38,7 @@
   background: rgba(225, 29, 46, 0.05);
   padding: 4px 12px;
   border-radius: 100px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   display: inline-block;
 }
 
@@ -47,7 +47,7 @@
   font-weight: 800;
   line-height: 1.1;
   color: #000;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   letter-spacing: -2px;
 }
 
@@ -62,7 +62,7 @@
   height: 500px;
   border-radius: 32px;
   overflow: hidden;
-  margin-bottom: 80px;
+  margin-bottom: 12px;
 }
 
 .case-visual img {
@@ -74,13 +74,13 @@
 .case-body {
   display: grid;
   grid-template-columns: 1fr 350px;
-  gap: 80px;
+  gap: 12px;
 }
 
 .case-content-section h2 {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   color: #000;
 }
 
@@ -88,12 +88,12 @@
   font-size: 18px;
   line-height: 1.8;
   color: #444;
-  margin-bottom: 48px;
+  margin-bottom: 12px;
 }
 
 .results-box {
   background: #f9f9f9;
-  padding: 40px;
+  padding: 12px;
   border-radius: 24px;
   border: 1px solid #eee;
 }
@@ -101,13 +101,13 @@
 .results-box h3 {
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   color: #000;
 }
 
 .outcomes-grid {
   display: grid;
-  gap: 16px;
+  gap: 12px;
 }
 
 .outcome-item {
@@ -126,11 +126,11 @@
 .case-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 12px;
 }
 
 .sidebar-card {
-  padding: 32px;
+  padding: 12px;
   background: #000;
   border-radius: 24px;
   color: #fff;
@@ -138,15 +138,15 @@
 
 .sidebar-card h4 {
   font-size: 18px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   color: #fff;
 }
 
 .metric-item {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .metric-item:last-child {
@@ -169,7 +169,7 @@
 }
 
 .sidebar-cta {
-  padding: 32px;
+  padding: 12px;
   background: #fcfcfc;
   border: 1px solid #eee;
   border-radius: 24px;
@@ -179,13 +179,13 @@
 .sidebar-cta p {
   font-size: 14px;
   color: #666;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   font-weight: 500;
 }
 
 .sidebar-btn {
   width: 100%;
-  padding: 16px;
+  padding: 12px;
   background: var(--primary-red);
   color: #fff;
   border: none;

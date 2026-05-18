@@ -1,11 +1,11 @@
 .expertise-section {
   background-color: var(--bg-white);
-  padding: 100px 40px 60px;
+  padding: 12px 40px 12px;
 }
 
 @media (max-width: 768px) {
   .expertise-section {
-    padding: 60px 20px 40px;
+    padding: 12px 20px 12px;
   }
 }
 

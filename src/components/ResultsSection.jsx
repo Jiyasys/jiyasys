@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import AnimateOnScroll from './AnimateOnScroll';
 import './ResultsSection.css';
 
 const resultsData = [
@@ -54,40 +55,44 @@ const ResultsSection = () => {
   return (
     <section className="results-section">
       <div className="results-container">
-        <div className="results-header">
-          <h2 className="results-title">Results that move businesses forward.</h2>
-          <p className="results-subtitle">
-            From startups to global enterprises, our clients trust Source® to build automation strategies that create efficiency and long-term value.
-          </p>
-        </div>
+        <AnimateOnScroll animation="fade-up" delay={0}>
+          <div className="results-header">
+            <h2 className="results-title">Results that move businesses forward.</h2>
+            <p className="results-subtitle">
+              From startups to global enterprises, our clients trust Source® to build automation strategies that create efficiency and long-term value.
+            </p>
+          </div>
+        </AnimateOnScroll>
         
         <div className="results-cards-list">
-          {resultsData.map((item) => (
-            <div key={item.id} className="result-card" onClick={() => navigate('/case-studies')} style={{ cursor: 'pointer' }}>
-              <div className="result-image-box">
-                <div className="result-logo-overlay">
-                  <span>{item.icon}</span>
-                  {item.client}
-                </div>
-                <img src={item.image} alt={item.client} className="result-image" />
-              </div>
-              
-              <div className="result-content">
-                <div className="result-info">
-                  <h3 className="result-client">{item.client}</h3>
-                  <p className="result-description">{item.description}</p>
+          {resultsData.map((item, idx) => (
+            <AnimateOnScroll key={item.id} animation="fade-up" delay={idx * 0.1}>
+              <div className="result-card" onClick={() => navigate('/case-studies')} style={{ cursor: 'pointer' }}>
+                <div className="result-image-box">
+                  <div className="result-logo-overlay">
+                    <span>{item.icon}</span>
+                    {item.client}
+                  </div>
+                  <img src={item.image} alt={item.client} className="result-image" />
                 </div>
                 
-                <div className="result-stats">
-                  {item.stats.map((stat, idx) => (
-                    <div key={idx} className="result-stat-item">
-                      <span className="stat-value">■ {stat.value}</span>
-                      <span className="stat-label">{stat.label}</span>
-                    </div>
-                  ))}
+                <div className="result-content">
+                  <div className="result-info">
+                    <h3 className="result-client">{item.client}</h3>
+                    <p className="result-description">{item.description}</p>
+                  </div>
+                  
+                  <div className="result-stats">
+                    {item.stats.map((stat, sidx) => (
+                      <div key={sidx} className="result-stat-item">
+                        <span className="stat-value">■ {stat.value}</span>
+                        <span className="stat-label">{stat.label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>

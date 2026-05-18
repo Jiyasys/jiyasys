@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
 }
 
 .testimonial-title {
@@ -33,7 +33,7 @@
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .testimonial-subtitle {
@@ -74,7 +74,7 @@
 
 .quote-box {
   color: #fff;
-  padding: 40px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -93,7 +93,7 @@
 .author-info {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .author-avatar {
@@ -132,7 +132,7 @@
 .logo-strip-track {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 12px;
   width: max-content;
   animation: scrollMarquee 15s linear infinite;
   padding-left: 60px; /* Offset gap for seamless loop */
@@ -166,7 +166,7 @@
 .image-box {
   position: relative;
   flex-grow: 1;
-  padding: 20px;
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,7 +213,7 @@
   color: #fff;
   font-size: 14px;
   font-weight: 600;
-  padding: 15px 30px;
+  padding: 12px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -234,7 +234,7 @@
 @media (max-width: 1024px) {
   .testimonial-header {
     flex-direction: column;
-    gap: 30px;
+    gap: 12px;
   }
   
   .testimonial-header-right {
@@ -258,7 +258,7 @@
   }
 
   .quote-box {
-    padding: 30px 20px;
+    padding: 12px 20px;
     min-height: auto;
   }
 
@@ -280,7 +280,7 @@
 
   .logo-strip {
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 12px;
     justify-content: center;
   }
 }

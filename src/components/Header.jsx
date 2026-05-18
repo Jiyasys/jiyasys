@@ -56,28 +56,30 @@ const Header = () => {
   };
 
   const menuItems = {
-    services: {
-      title: 'Services',
+    company: {
+      title: 'Company',
       columns: [
         {
-          title: 'Development',
+          title: 'Company',
           items: [
-            { name: 'Software Building', path: '/software-building', icon: <Code size={16} /> },
-            { name: 'Mobile App Building', path: '/mobile-app-building', icon: <Smartphone size={16} /> },
-            { name: 'Web Development', path: '/web-development', icon: <Globe size={16} /> },
-            { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud size={16} /> }
+            { name: 'Home', path: '/' },
+            { name: 'About', path: '/about' },
+            { name: 'Blogs', path: '/blog' }
           ]
         },
         {
-          title: 'Specialized',
+          title: 'Connect',
           items: [
-            { name: 'AI Automations', path: '/ai-automations', icon: <Cpu size={16} /> },
-            { name: 'Tech Consulting', path: '/tech-consulting', icon: <BarChart size={16} /> },
-            { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield size={16} /> },
-            { name: 'UI/UX Design', path: '/ui-ux-design', icon: <Rocket size={16} /> }
+            { name: 'Our Experts', path: '/experts' },
+            { name: 'Careers', path: '/careers' }
           ]
         }
-      ]
+      ],
+      banner: {
+        text: 'Learn more about Source',
+        image: 'https://framerusercontent.com/images/rErw2A1ONfnlJHNAs72PHihTU.webp?scale-down-to=1024&width=3277&height=1843',
+        link: '/about'
+      }
     },
     industries: {
       title: 'Industries',
@@ -91,7 +93,34 @@ const Header = () => {
             { name: 'Edtech', path: '/industry/edtech' }
           ]
         }
-      ]
+      ],
+      banner: {
+        text: 'Learn more about Source',
+        image: 'https://framerusercontent.com/images/xbnCNFJnFUT2cvuqgcqTvCoJHgk.webp?width=1500&height=2000',
+        link: '/about'
+      }
+    },
+    services: {
+      title: 'Services',
+      columns: [
+        {
+          title: 'Our services',
+          items: [
+            { name: 'AI Product Development & Automation', path: '/service/01' },
+            { name: 'SaaS Product Development', path: '/service/02' },
+            { name: 'Web Development', path: '/service/03' },
+            { name: 'Mobile App Development', path: '/service/04' },
+            { name: 'UI/UX Design', path: '/service/05' },
+            { name: 'ECommerce Development', path: '/service/06' },
+            { name: 'Animated & Cinematic Website Experiences', path: '/service/07' }
+          ]
+        }
+      ],
+      banner: {
+        text: 'Explore our Services',
+        image: 'https://framerusercontent.com/images/7V11bCw5ZhBsQiaAGZyRDIvLYY.webp?scale-down-to=1024&width=1920&height=1080',
+        link: '/#services-list'
+      }
     }
   };
 
@@ -114,12 +143,12 @@ const Header = () => {
       <nav className={`header-nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
         <ul className="nav-list">
           <li
-            className={`nav-item ${activeMenu === 'services' ? 'active' : ''}`}
-            onMouseEnter={() => !mobileMenuOpen && setActiveMenu('services')}
-            onClick={() => mobileMenuOpen && setActiveMenu(activeMenu === 'services' ? null : 'services')}
+            className={`nav-item ${activeMenu === 'company' ? 'active' : ''}`}
+            onMouseEnter={() => !mobileMenuOpen && setActiveMenu('company')}
+            onClick={() => mobileMenuOpen && setActiveMenu(activeMenu === 'company' ? null : 'company')}
           >
-            <span>Services</span>
-            <ChevronDown size={14} className={`chevron ${activeMenu === 'services' ? 'rotate' : ''}`} />
+            <span>Company</span>
+            <ChevronDown size={14} className={`chevron ${activeMenu === 'company' ? 'rotate' : ''}`} />
           </li>
 
           <li
@@ -133,34 +162,53 @@ const Header = () => {
           <li className="nav-item">
             <Link to="/case-studies" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
           </li>
-          <li className="nav-item">
-            <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>Blogs</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
+          <li
+            className={`nav-item ${activeMenu === 'services' ? 'active' : ''}`}
+            onMouseEnter={() => !mobileMenuOpen && setActiveMenu('services')}
+            onClick={() => mobileMenuOpen && setActiveMenu(activeMenu === 'services' ? null : 'services')}
+          >
+            <span>Services</span>
+            <ChevronDown size={14} className={`chevron ${activeMenu === 'services' ? 'rotate' : ''}`} />
           </li>
         </ul>
 
         {activeMenu && (
-          <div className="mega-menu" onMouseEnter={() => !mobileMenuOpen && setActiveMenu(activeMenu)}>
-            <div className="mega-menu-content">
-              {menuItems[activeMenu].columns.map((column, idx) => (
-                <div key={idx} className="mega-menu-column">
-                  <h4 className="column-title">{column.title}</h4>
-                  <ul className="column-list">
-                    {column.items.map((item, i) => (
-                      <li key={i} className="column-item">
-                        <Link to={item.path} className="item-link" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>
-                          {item.icon && <span className="item-icon">{item.icon}</span>}
-                          <span className="item-name">{item.name}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+          <>
+            <div className="mega-menu-overlay" onMouseEnter={() => !mobileMenuOpen && setActiveMenu(null)} onClick={() => setActiveMenu(null)}></div>
+            <div className="mega-menu" onMouseEnter={() => !mobileMenuOpen && setActiveMenu(activeMenu)}>
+              <div className="mega-menu-content">
+                <div className="mega-menu-columns">
+                  {menuItems[activeMenu].columns.map((column, idx) => (
+                    <div key={idx} className="mega-menu-column">
+                      <h4 className="column-title">{column.title}</h4>
+                      <ul className="column-list">
+                        {column.items.map((item, i) => (
+                          <li key={i} className="column-item">
+                            <Link to={item.path} className="item-link" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>
+                              {item.icon && <span className="item-icon">{item.icon}</span>}
+                              <span className="item-name">{item.name}</span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
-              ))}
+                {menuItems[activeMenu].banner && (
+                  <Link to={menuItems[activeMenu].banner.link} className="mega-menu-banner" onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>
+                    <img src={menuItems[activeMenu].banner.image} alt="Banner" className="banner-image" />
+                    <div className="banner-content">
+                      <span className="banner-text">{menuItems[activeMenu].banner.text}</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="banner-arrow">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </div>
+                  </Link>
+                )}
+              </div>
             </div>
-          </div>
+          </>
         )}
       </nav>
 

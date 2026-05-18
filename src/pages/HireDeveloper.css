@@ -17,7 +17,7 @@
 .hire-hero h1 {
   font-size: 64px;
   font-weight: 800;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   line-height: 1.1;
 }
 
@@ -28,11 +28,11 @@
 .hire-hero p {
   font-size: 20px;
   color: #666;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
 }
 
 .primary-btn {
-  padding: 20px 40px;
+  padding: 12px 40px;
   background: var(--primary-red);
   color: #fff;
   border: none;
@@ -56,17 +56,17 @@
   font-size: 40px;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 12px;
 }
 
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 12px;
 }
 
 .benefit-card {
-  padding: 40px;
+  padding: 12px;
   background: #f9f9f9;
   border-radius: 32px;
   text-align: center;
@@ -77,12 +77,12 @@
   width: 56px;
   height: 56px;
   color: var(--primary-red);
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .benefit-card h3 {
   font-size: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .benefit-card p {
@@ -98,17 +98,17 @@
 .roles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 12px;
 }
 
 .role-card {
-  padding: 40px;
+  padding: 12px;
   background: #fff;
   border-radius: 24px;
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .role-card h3 {
