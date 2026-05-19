@@ -153,7 +153,7 @@
   top: 44px;
   left: 0;
   width: calc(132% + 20px);
-  background: #fdfcf9;
+  background: #ffffff;
   border-bottom: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
@@ -474,7 +474,7 @@
     display: block !important;
     padding: 16px 20px;
     animation: none;
-    background-color: #f4f3ed;
+    background-color: #ffffff;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
   }

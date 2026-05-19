@@ -1,5 +1,5 @@
 .service-page-wrapper {
-  background-color: #f4f3ed;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
 .service-detail-main {
   flex: 1;
   width: 100%;
-  border-top: 1px solid #e2dfd8;
+  border-top: 1px solid #e5e7eb;
 }
 
 .service-detail-container {
@@ -20,14 +20,14 @@
 /* Sidebar Styling */
 .service-sidebar {
   flex: 0 0 300px;
-  border-right: 1px solid #e2dfd8;
+  border-right: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
 }
 
 .sidebar-top {
   height: 80px;
-  border-bottom: 1px solid #e2dfd8;
+  border-bottom: 1px solid #e5e7eb;
   display: flex;
   align-items: center;
   padding: 0 28px;
@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  border-bottom: 1px solid #e2dfd8;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .green-square {
@@ -84,13 +84,13 @@
   align-items: center;
   gap: 12px;
   padding: 14px 28px;
-  border-bottom: 1px solid #e2dfd8;
+  border-bottom: 1px solid #e5e7eb;
   text-decoration: none;
   transition: background-color 0.3s;
 }
 
 .other-service-item:hover {
-  background-color: #eae9e3;
+  background-color: #f9fafb;
 }
 
 .other-service-thumbnail {
@@ -120,7 +120,7 @@
   display: flex;
   align-items: center;
   padding: 0 48px;
-  border-bottom: 1px solid #e2dfd8;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .service-main-title {

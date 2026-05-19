@@ -1,8 +1,8 @@
 .faq-section {
-  background-color: #f4f3ed;
-  padding: 80px 40px;
+  background-color: #ffffff;
+  padding: 33px 40px;
   width: 100%;
-  border-top: 1px solid #e2dfd8;
+  border-top: 1px solid #e5e7eb;
 }
 
 .faq-container {
@@ -57,7 +57,7 @@
   aspect-ratio: 0.85;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 86%, 86% 100%, 0 100%);
-  background-color: #e2dfd8;
+  background-color: #e5e7eb;
   margin-bottom: 10px;
 }
 
@@ -177,13 +177,14 @@
 }
 
 .faq-accordion-container {
-  background-color: #eae9e3;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
 }
 
 .faq-item {
-  border-bottom: 1px solid #d4d1c9;
+  border-bottom: 1px solid #e5e7eb;
   transition: background-color 0.3s ease;
   overflow: hidden;
 }

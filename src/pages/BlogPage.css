@@ -1,5 +1,5 @@
 .blog-page {
-  background-color: #f4f3ed;
+  background-color: #ffffff;
   min-height: 100vh;
 }
 
@@ -50,12 +50,12 @@
   display: flex;
   gap: 40px;
   padding: 24px 0;
-  border-top: 1px solid #d4d1c9;
+  border-top: 1px solid #e5e7eb;
   transition: background-color 0.2s ease;
 }
 
 .blog-rows-container>div:last-child .blog-row-modern {
-  border-bottom: 1px solid #d4d1c9;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 /* Left Column: Meta */

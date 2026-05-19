@@ -1,7 +1,7 @@
 .tech-showcase-section {
-  background-color: #f4f3ed;
+  background-color: #ffffff;
   padding: 60px 0;
-  border-top: 1px solid #e2dfd8;
+  border-top: 1px solid #e5e7eb;
 }
 
 .tech-container {
@@ -23,8 +23,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: #eae9e3;
-  border: 1px solid #d4d1c9;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   padding: 4px 10px;
 }
 
@@ -70,8 +70,8 @@
 
 /* Sleek Active Pill */
 .tech-pill-card {
-  background-color: #eae9e3;
-  border: 1px solid #d4d1c9;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   padding: 8px 16px;
   height: 36px;
   border-radius: 20px;

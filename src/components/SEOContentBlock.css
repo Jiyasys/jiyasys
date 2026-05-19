@@ -1,7 +1,7 @@
 .seo-block-section {
-  background-color: #f4f3ed;
+  background-color: #ffffff;
   padding: 50px 0 0; /* Reduced padding from 80px */
-  border-top: 1px solid #e2dfd8;
+  border-top: 1px solid #e5e7eb;
 }
 
 .seo-block-container {
@@ -10,8 +10,8 @@
 }
 
 .seo-block-wrapper {
-  background-color: #eae9e3;
-  border: 1px solid #d4d1c9;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   padding: 30px 40px; /* Reduced vertical padding from 48px to 30px */
   display: flex;
   justify-content: space-between;
@@ -38,7 +38,7 @@
 /* Vertical Divider */
 .seo-vertical-divider {
   width: 1px;
-  background-color: #d4d1c9;
+  background-color: #e5e7eb;
   align-self: stretch;
 }
 
@@ -47,8 +47,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: #f4f3ed;
-  border: 1px solid #d4d1c9;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
   padding: 4px 10px; /* Slimmed badge */
 }
 
@@ -107,7 +107,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  border-bottom: 1px solid #d4d1c9;
+  border-bottom: 1px solid #e5e7eb;
   padding-bottom: 6px;
 }
 
@@ -137,8 +137,8 @@
 
 /* Sleek Low-Profile Single-Row Card Pill */
 .seo-chip-card {
-  background-color: #f4f3ed;
-  border: 1px solid #d4d1c9;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
   padding: 8px 12px; /* Reduced padding from 14px to 8px */
   display: flex;
   flex-direction: row;

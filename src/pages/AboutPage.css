@@ -1,5 +1,5 @@
 .about-page {
-  background-color: #f4f3ed;
+  background-color: #ffffff;
   min-height: 100vh;
 }
 
@@ -16,7 +16,7 @@
 /* About Modern Section */
 .about-section-modern {
   padding: 50px 0 80px;
-  border-bottom: 1px solid #e2dfd8;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .about-section-modern .about-container-modern {
@@ -33,13 +33,13 @@
 }
 
 .about-badge-modern {
-  background-color: #eae9e3;
+  background-color: #f9fafb;
   padding: 14px 20px;
   display: inline-flex;
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 32px;
-  border: 1px solid #d4d1c9;
+  border: 1px solid #e5e7eb;
   max-width: 460px;
 }
 
@@ -100,7 +100,7 @@
 /* Mission & Vision Modernized */
 .mission-vision-modern {
   padding: 15px 0;
-  border-bottom: 1px solid #e2dfd8;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .grid-split {
@@ -110,8 +110,8 @@
 }
 
 .mv-card {
-  background-color: #eae9e3;
-  border: 1px solid #d4d1c9;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   padding: 36px;
   display: flex;
   flex-direction: column;
@@ -163,8 +163,8 @@
 }
 
 .stat-card-modern {
-  background-color: #eae9e3;
-  border: 1px solid #d4d1c9;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   padding: 30px 20px;
   text-align: center;
   display: flex;

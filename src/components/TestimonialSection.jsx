@@ -4,48 +4,21 @@ import './TestimonialSection.css';
 const testimonials = [
   {
     id: 1,
-    quote: "Manual itinerary building and supplier coordination were breaking our operations. Source rebuilt the process — our team moves twice as fast, client communication is seamless, and scaling is finally possible.",
-    author: "Daria Simonova",
-    role: "Director of Operations, 45 Degrees",
-    avatar: "https://i.pravatar.cc/150?img=5",
-    image: "/luxury_travel_automation_result_1778574810316.png",
+    quote: "Jiyasys delivered more than development services they became a strategic technology partner focused on scalability, execution quality, and long-term product growth.",
+    author: "Alex Rivera",
+    role: "CTO, NextGen SaaS",
+    avatar: "https://i.pravatar.cc/150?img=12",
+    image: "/railspeed_ai_logistics.png",
     bgColor: "#3b5eff"
   },
   {
     id: 2,
-    quote: "We were drowning in false positives and manual reviews. Source’s adaptive ML cut investigation time dramatically and provided real-time risk intelligence, reshaping how our fraud team operates.",
-    author: "David Lorne",
-    role: "Head of Fraud Strategy, Clandestine",
-    avatar: "https://i.pravatar.cc/150?img=11",
+    quote: "From UI/UX design to backend architecture and AI integration, the team maintained excellent communication and delivered a premium digital product experience.",
+    author: "Sarah Jenkins",
+    role: "Founder, Zenith AI",
+    avatar: "https://i.pravatar.cc/150?img=5",
     image: "https://framerusercontent.com/images/SotjoARFrMCehNUIHUe6OayExMw.jpg?scale-down-to=1024&width=1200&height=904",
     bgColor: "#E11D2E"
-  },
-  {
-    id: 3,
-    quote: "Automation wasn’t just about speed for us — it was about keeping our brand promise. Source helped us create a seamless post-purchase experience that matches the quality and care our customers expect.",
-    author: "Jordan Hale",
-    role: "Director of Fulfillment & Logistics, Elasticwear",
-    avatar: "https://i.pravatar.cc/150?img=12",
-    image: "/railspeed_ai_logistics.png",
-    bgColor: "#7c3aed"
-  },
-  {
-    id: 4,
-    quote: "Source modernized our lending operations where internal efforts had stalled. Decision times fell from days to hours, compliance improved, and customers feel the difference immediately.",
-    author: "Maria Vogel",
-    role: "VP of Digital Transformation, GlobalBank",
-    avatar: "https://i.pravatar.cc/150?img=9",
-    image: "/modern_finance_automation_result_1778574828659.png",
-    bgColor: "#2563eb"
-  },
-  {
-    id: 5,
-    quote: "Source helped us break down the operational silos that were slowing our teams. Their automation layer let our systems communicate instantly, so engineers and managers could spend less time syncing and more time building.",
-    author: "Dr. Lila Chen",
-    role: "Head of Platform Engineering, EnnLabs",
-    avatar: "https://i.pravatar.cc/150?img=20",
-    image: "https://framerusercontent.com/images/Lx6kJ0F2dUDah4lVapWANVGhWM.jpg?width=900&height=1200",
-    bgColor: "#111827"
   }
 ];
 
@@ -67,13 +40,13 @@ const TestimonialSection = () => {
       <div className="testimonial-container">
         <div className="testimonial-header">
           <h2 className="testimonial-title">
-            What our clients say about<br />working with Source®.
+            Built with trust, collaboration,<br />and innovation
           </h2>
           <div className="testimonial-header-right">
             <p className="testimonial-subtitle">
-              Hear from the companies that rely on Source to build, scale, and innovate with AI every day.
+              Hear from the companies that rely on Jiyasys to build, scale, and innovate with AI every day.
             </p>
-            <a href="#review" className="review-link">Leave a review ↗</a>
+            <a href="#contact" className="review-link">Leave a review ↗</a>
           </div>
         </div>
 
@@ -93,17 +66,15 @@ const TestimonialSection = () => {
             <div className="logo-strip-container">
               <div className="logo-strip-track">
                 {/* Original Set */}
-                <span className="client-logo">Ispeed</span>
-                <span className="client-logo font-bold">N</span>
-                <span className="client-logo">Elasticware</span>
-                <span className="client-logo">ennLabs</span>
-                <span className="client-logo font-bold">Leapyear</span>
+                <span className="client-logo">NextGen</span>
+                <span className="client-logo font-bold">Zenith AI</span>
+                <span className="client-logo">Jiyasys Labs</span>
+                <span className="client-logo font-bold">Innovation</span>
                 {/* Duplicated Set for Seamless Loop */}
-                <span className="client-logo">Ispeed</span>
-                <span className="client-logo font-bold">N</span>
-                <span className="client-logo">Elasticware</span>
-                <span className="client-logo">ennLabs</span>
-                <span className="client-logo font-bold">Leapyear</span>
+                <span className="client-logo">NextGen</span>
+                <span className="client-logo font-bold">Zenith AI</span>
+                <span className="client-logo">Jiyasys Labs</span>
+                <span className="client-logo font-bold">Innovation</span>
               </div>
             </div>
           </div>

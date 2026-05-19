@@ -4,7 +4,7 @@
 
 .software-page {
   min-height: 100vh;
-  background-color: var(--bg-beige);
+  background-color: #ffffff;
 }
 
 /* ---- Hero Section ---- */
@@ -12,8 +12,8 @@
   padding: 12px 40px 12px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #f5f5e8 0%, var(--bg-beige) 100%);
-  border-bottom: 1px solid var(--border-color);
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .sw-hero-inner {
@@ -27,7 +27,7 @@
   align-items: center;
   gap: 8px;
   background: transparent;
-  border: 1px solid var(--border-color);
+  border: 1px solid #e5e7eb;
   padding: 12px 20px;
   font-size: 14px;
   font-weight: 500;
@@ -244,7 +244,7 @@
 }
 
 .sw-card-benefit {
-  background: #fafaf5;
+  background: #f9fafb;
   border-radius: 8px;
   padding: 12px;
   border-left: 3px solid var(--primary-red);

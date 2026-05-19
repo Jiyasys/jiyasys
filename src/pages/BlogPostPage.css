@@ -1,5 +1,5 @@
 .blog-post-page {
-  background-color: #f4f3ed;
+  background-color: #ffffff;
   min-height: 100vh;
 }
 
@@ -17,7 +17,7 @@
 /* Post Header area */
 .post-header-modern {
   margin-bottom: 40px;
-  border-bottom: 1px solid #d4d1c9;
+  border-bottom: 1px solid #e5e7eb;
   padding-bottom: 28px;
 }
 
@@ -53,8 +53,8 @@
   color: var(--primary-red);
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  background-color: #eae9e3;
-  border: 1px solid #d4d1c9;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   padding: 3px 8px;
   margin-right: 4px;
 }
@@ -128,8 +128,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #eae9e3;
-  border: 1px solid #d4d1c9;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   color: var(--text-dark);
   padding: 8px 14px;
   font-size: 11px;
@@ -166,13 +166,16 @@
 
 /* Custom layout for list strings */
 .editorial-list-block {
-  background-color: #eae9e3;
+  background-color: #f9fafb;
   border-left: 2px solid var(--primary-red);
   padding: 16px 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin: 8px 0;
+  border-top: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .editorial-list-line {
@@ -186,8 +189,8 @@
 /* Custom Footer Callout */
 .post-footer-callout {
   margin-top: 40px;
-  background-color: #eae9e3;
-  border: 1px solid #d4d1c9;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -239,7 +242,7 @@
 
 /* Not found area */
 .not-found-page {
-  background-color: #f4f3ed;
+  background-color: #ffffff;
   min-height: 100vh;
 }
 
@@ -248,8 +251,8 @@
   margin: 120px auto;
   padding: 40px 20px;
   text-align: center;
-  background-color: #eae9e3;
-  border: 1px solid #d4d1c9;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
 }
 
 .not-found-title {

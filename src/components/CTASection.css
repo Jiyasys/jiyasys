@@ -1,7 +1,7 @@
 .cta-section {
-  background-color: #f4f3ed;
+  background-color: #ffffff;
   padding: 60px 0 0; /* Align beautifully, leaving no gap above the full-width button strip */
-  border-top: 1px solid #e2dfd8;
+  border-top: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -14,8 +14,8 @@
 }
 
 .cta-content-wrapper {
-  background-color: #eae9e3;
-  border: 1px solid #d4d1c9;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
   padding: 40px;
   display: flex;
   justify-content: space-between;
@@ -35,8 +35,8 @@
 }
 
 .cta-badge {
-  background-color: #f4f3ed;
-  border: 1px solid #d4d1c9;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
   padding: 6px 12px;
   display: inline-flex;
   align-items: center;
