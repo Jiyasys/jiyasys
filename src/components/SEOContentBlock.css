@@ -1,0 +1,254 @@
+.seo-block-section {
+  background-color: #f4f3ed;
+  padding: 50px 0 0; /* Reduced padding from 80px */
+  border-top: 1px solid #e2dfd8;
+}
+
+.seo-block-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seo-block-wrapper {
+  background-color: #eae9e3;
+  border: 1px solid #d4d1c9;
+  padding: 30px 40px; /* Reduced vertical padding from 48px to 30px */
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+}
+
+/* Columns */
+.seo-block-left {
+  flex: 1.05;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px; /* Reduced from 16px */
+}
+
+.seo-block-right {
+  flex: 0.95;
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Reduced from 20px */
+}
+
+/* Vertical Divider */
+.seo-vertical-divider {
+  width: 1px;
+  background-color: #d4d1c9;
+  align-self: stretch;
+}
+
+/* Badge */
+.seo-block-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f4f3ed;
+  border: 1px solid #d4d1c9;
+  padding: 4px 10px; /* Slimmed badge */
+}
+
+.seo-badge-line {
+  width: 12px;
+  height: 2px;
+  background-color: var(--primary-red);
+}
+
+.seo-badge-text {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: var(--text-dark);
+}
+
+/* Headings */
+.seo-block-heading {
+  font-family: var(--font-heading);
+  font-size: 26px; /* Reduced from 32px */
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.75px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.seo-block-heading .highlight-text {
+  color: var(--primary-red);
+}
+
+/* Paragraphs */
+.seo-block-paragraph {
+  font-size: 12.5px; /* Reduced from 13.5px */
+  line-height: 1.55;
+  color: var(--text-dark);
+  opacity: 0.75;
+  margin: 0;
+}
+
+.seo-block-paragraph.highlight-p {
+  font-size: 13.5px; /* Reduced from 15px */
+  font-weight: 500;
+  color: var(--text-dark);
+  opacity: 0.95;
+}
+
+.seo-block-paragraph.secondary-p {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Right Header */
+.seo-expertise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #d4d1c9;
+  padding-bottom: 6px;
+}
+
+.seo-expertise-title {
+  font-family: var(--font-heading);
+  font-size: 12px; /* Reduced from 13px */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.seo-expertise-count {
+  font-family: monospace;
+  font-size: 10px;
+  color: var(--text-dark);
+  opacity: 0.55;
+}
+
+/* Chips Grid - Highly Compact 2-Column Pill Grid */
+.seo-tags-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px; /* Reduced gap from 12px to 8px */
+}
+
+/* Sleek Low-Profile Single-Row Card Pill */
+.seo-chip-card {
+  background-color: #f4f3ed;
+  border: 1px solid #d4d1c9;
+  padding: 8px 12px; /* Reduced padding from 14px to 8px */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 38px; /* Greatly reduced from 96px */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.seo-chip-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--primary-red);
+  background-color: #ffffff;
+}
+
+.seo-chip-card-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.seo-chip-id {
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-dark);
+  opacity: 0.45;
+  transition: color 0.3s ease;
+}
+
+.seo-chip-card:hover .seo-chip-id {
+  color: var(--primary-red);
+}
+
+.seo-chip-arrow {
+  font-size: 10px;
+  color: var(--text-dark);
+  opacity: 0.35;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.seo-chip-card:hover .seo-chip-arrow {
+  transform: translate(1px, -1px);
+  color: var(--primary-red);
+}
+
+.seo-chip-name {
+  font-size: 11px; /* Reduced from 12px */
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.seo-chip-card:hover .seo-chip-name {
+  white-space: normal; /* Expand naturally on hover if text is long */
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .seo-block-wrapper {
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .seo-vertical-divider {
+    display: none;
+  }
+
+  .seo-block-left,
+  .seo-block-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .seo-tags-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .seo-block-section {
+    padding: 30px 0 0;
+  }
+
+  .seo-block-wrapper {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .seo-block-heading {
+    font-size: 22px;
+  }
+
+  .seo-tags-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .seo-chip-card {
+    min-height: 36px;
+    padding: 6px 10px;
+  }
+}

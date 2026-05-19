@@ -89,6 +89,7 @@ const Header = () => {
           title: 'Connect',
           items: [
             { name: 'Projects', path: '/projects' },
+            { name: 'Process', path: '/process' },
             { name: 'Careers', path: '/careers' }
           ]
         }

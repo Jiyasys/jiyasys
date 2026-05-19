@@ -20,6 +20,14 @@ const faqs = [
   {
     question: "How long does a project take?",
     answer: "Project timelines depend on complexity, features, and business requirements. We follow agile development methodologies with continuous communication and milestone-based delivery."
+  },
+  {
+    question: "Do you offer post-launch support and maintenance?",
+    answer: "Yes. We provide continuous monitoring, performance optimization, security updates, and AI model refinement post-launch to ensure your systems remain scalable and stable."
+  },
+  {
+    question: "How do we get started on a project with Jiyasys?",
+    answer: "Simply schedule a consultation or fill out our project scope form. We will analyze your requirements, set up a strategy call, and present a clear technical roadmap."
   }
 ];
 

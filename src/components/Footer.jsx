@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container footer-grid">
         <div className="footer-brand">
           <img src="https://www.jiyasys.com/logo.png" alt="Jiyasys" className="footer-logo" />
-          <p>Jiyasys Softwares Pvt. Ltd. specializes in custom software development, AI product engineering, SaaS development, automation systems, UI/UX design, and digital transformation services.</p>
+          <p>Jiyasys an AI-first driven company focused on building intelligent, scalable, and immersive digital experiences. We specialize in AI product development, animated & cinematic websites, SaaS platforms, and intelligent automation systems. At Jiyasys, we don’t just develop software we create meaningful user journeys where technology feels seamless, thoughtful, and future-ready.</p>
           <div className="social-links">
             <a href="https://www.jiyasys.com/" target="_blank" rel="noopener noreferrer"><Globe size={20} /></a>
             <a href="https://www.jiyasys.com/" target="_blank" rel="noopener noreferrer"><Share2 size={20} /></a>
@@ -35,6 +35,8 @@ const Footer = () => {
           <ul>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/case-studies">Portfolio</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/process">Process</Link></li>
             <li><Link to="/blog">Blog</Link></li>
             <li><Link to="/careers">Careers</Link></li>
             <li><Link to="/contact">Contact</Link></li>

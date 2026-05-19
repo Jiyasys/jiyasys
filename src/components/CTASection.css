@@ -1,6 +1,152 @@
 .cta-section {
-  background-color: var(--bg-white);
-  padding: 0;
+  background-color: #f4f3ed;
+  padding: 60px 0 0; /* Align beautifully, leaving no gap above the full-width button strip */
+  border-top: 1px solid #e2dfd8;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.cta-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cta-content-wrapper {
+  background-color: #eae9e3;
+  border: 1px solid #d4d1c9;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-text-side {
+  flex: 1;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cta-badge {
+  background-color: #f4f3ed;
+  border: 1px solid #d4d1c9;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cta-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-red);
+}
+
+.cta-badge-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: var(--text-dark);
+}
+
+.cta-main-heading {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -1.25px;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.cta-main-heading .highlight {
+  color: var(--primary-red);
+}
+
+.cta-main-description {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-dark);
+  opacity: 0.8;
+  margin: 0;
+}
+
+.cta-actions-side {
+  flex-shrink: 0;
+}
+
+.cta-buttons-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  width: 240px;
+}
+
+/* Primary Button Styling */
+.cta-btn-primary {
+  background-color: var(--primary-red);
+  color: #ffffff;
+  border: 1px solid var(--primary-red);
+  padding: 12px 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-btn-primary .btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.cta-btn-primary:hover {
+  background-color: var(--text-dark);
+  border-color: var(--text-dark);
+}
+
+.cta-btn-primary:hover .btn-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Secondary Button Styling */
+.cta-btn-secondary {
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
+  padding: 12px 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-btn-secondary:hover {
+  background-color: var(--text-dark);
+  color: #ffffff;
+}
+
+/* ======================================================= */
+/* Restored Signature Full-Width Sliding Button Strip Styles */
+/* ======================================================= */
+.cta-full-strip-container {
+  width: 100%;
 }
 
 .cta-button {
@@ -50,9 +196,67 @@
   transform: translateY(0);
 }
 
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .cta-section {
+    gap: 40px;
+  }
+
+  .cta-content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 28px;
+  }
+
+  .cta-buttons-flex {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .cta-btn-primary,
+  .cta-btn-secondary {
+    flex: 1;
+    min-width: 180px;
+  }
+}
+
 @media (max-width: 768px) {
+  .cta-section {
+    padding: 40px 0 0;
+    gap: 30px;
+  }
+
+  .cta-content-wrapper {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .cta-main-heading {
+    font-size: 24px;
+    letter-spacing: -0.75px;
+  }
+
+  .cta-main-description {
+    font-size: 12.5px;
+  }
+
+  .cta-buttons-flex {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-btn-primary,
+  .cta-btn-secondary {
+    width: 100%;
+    flex: none;
+    padding: 10px 16px;
+  }
+
   .cta-button {
-    height: 80px;
+    height: 70px;
     padding: 0 24px;
   }
   

@@ -14,6 +14,8 @@ import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import ServiceDetailPage from './components/ServiceDetailPage';
 import FAQSection from './components/FAQSection';
+import SEOContentBlock from './components/SEOContentBlock';
+import TechSection from './components/TechSection';
 
 // Page Imports
 import SoftwareBuildingPage from './pages/SoftwareBuildingPage';
@@ -33,6 +35,7 @@ import CybersecurityPage from './pages/CybersecurityPage';
 import UIUXDesignPage from './pages/UIUXDesignPage';
 import HireDeveloperPage from './pages/HireDeveloperPage';
 import ProjectsPage from './pages/ProjectsPage';
+import ProcessPage from './pages/ProcessPage';
 
 // Industry Pages
 import FintechPage from './pages/FintechPage';
@@ -55,8 +58,8 @@ import './index.css';
 function HomePage() {
   return (
     <div className="app-container">
-      <SEO 
-        title="Home" 
+      <SEO
+        title="Home"
         description="Jiyasys - Your Partner for Enterprise IT Services, Software Development, and AI Automations."
       />
       <Header />
@@ -69,7 +72,9 @@ function HomePage() {
 
         <ResultsSection />
         <FAQSection />
+        <TechSection />
         <TestimonialSection />
+        <SEOContentBlock />
         <CTASection />
       </main>
       <Footer />
@@ -99,7 +104,8 @@ function App() {
       <Route path="/hire-developers" element={<HireDeveloperPage />} />
       <Route path="/service/:id" element={<ServiceDetailPage />} />
       <Route path="/projects" element={<ProjectsPage />} />
-      
+      <Route path="/process" element={<ProcessPage />} />
+
       {/* Industry Routes */}
       <Route path="/industry/fintech" element={<FintechPage />} />
       <Route path="/industry/healthcare" element={<HealthcarePage />} />
