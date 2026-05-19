@@ -4,10 +4,30 @@ import GenericDetail from '../components/GenericDetail';
 
 const EdtechIndustryPage = () => {
   const features = [
-    { title: 'LMS Development', description: 'Comprehensive Learning Management Systems for schools and enterprises.', icon: BookOpen },
-    { title: 'Live Classrooms', description: 'Interactive virtual classrooms with low-latency video streaming.', icon: Video },
-    { title: 'Student Progress', description: 'Advanced tracking and reporting for student performance.', icon: BarChart },
-    { title: 'Collaborative Tools', description: 'Building communities with discussion forums and group projects.', icon: Users }
+    { 
+      title: 'LMS Development', 
+      description: 'Comprehensive Learning Management Systems for schools and enterprises.', 
+      icon: BookOpen,
+      benefit: 'Scale educational material to millions of users simultaneously with absolute zero classroom physical limits.' 
+    },
+    { 
+      title: 'Live Classrooms', 
+      description: 'Interactive virtual classrooms with low-latency video streaming.', 
+      icon: Video,
+      benefit: 'Boost learning retention through highly interactive, low-latency live engagement features.' 
+    },
+    { 
+      title: 'Student Progress', 
+      description: 'Advanced tracking and reporting for student performance.', 
+      icon: BarChart,
+      benefit: 'Identify struggling students early and automate parent reporting with personalized dashboards.' 
+    },
+    { 
+      title: 'Collaborative Tools', 
+      description: 'Building communities with discussion forums and group projects.', 
+      icon: Users,
+      benefit: 'Increase student completion rates by up to 50% by building self-sustaining peer learning ecosystems.' 
+    }
   ];
 
   return (

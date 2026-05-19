@@ -6,18 +6,32 @@ import './Hero.css';
 
 const Hero = () => {
   const navigate = useNavigate();
-  const [scrollOffset, setScrollOffset] = React.useState(0);
+  const subtextRef = React.useRef(null);
+  const socialRef = React.useRef(null);
 
   React.useEffect(() => {
+    let active = true;
     const handleScroll = () => {
-      setScrollOffset(window.scrollY);
+      if (!active) return;
+      requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        const translateYDown = Math.min(scrollY * 0.15, 60);
+        const translateYUp = Math.max(-scrollY * 0.15, -60);
+        
+        if (subtextRef.current) {
+          subtextRef.current.style.transform = `translateY(${translateYUp}px)`;
+        }
+        if (socialRef.current) {
+          socialRef.current.style.transform = `translateY(${translateYDown}px)`;
+        }
+      });
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      active = false;
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
-
-  const translateYDown = Math.min(scrollOffset * 0.15, 60);
-  const translateYUp = Math.max(-scrollOffset * 0.15, -60);
 
   return (
     <section className="hero">
@@ -30,7 +44,7 @@ const Hero = () => {
               className="hero-image"
             />
           </div>
-          <div className="hero-subtext" style={{ transform: `translateY(${translateYUp}px)` }}>
+          <div className="hero-subtext" ref={subtextRef}>
             Jiyasys Softwares Pvt. Ltd. is an AI-first driven company helping startups, enterprises, and modern brands build scalable SaaS platforms, AI product development systems, animated and cinematic websites, ECommerce platforms, and intelligent automation solutions.
           </div>
         </div>
@@ -57,7 +71,7 @@ const Hero = () => {
           </AnimateOnScroll>
 
 
-          <div className="social-proof" style={{ transform: `translateY(${translateYDown}px)` }}>
+          <div className="social-proof" ref={socialRef}>
             <div className="avatar-group">
               <img src="https://i.pravatar.cc/100?img=1" alt="Avatar" className="avatar" />
               <img src="https://i.pravatar.cc/100?img=2" alt="Avatar" className="avatar" />

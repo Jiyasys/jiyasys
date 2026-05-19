@@ -6,28 +6,20 @@ import './FAQSection.css';
 
 const faqs = [
   {
-    question: "What kind of companies does Jiyasys work with?",
-    answer: "We partner with organizations of all sizes – from early-stage startups to global enterprises. Whether you're scaling operations, improving internal workflows, or exploring AI adoption, our solutions are built to fit your business model and growth goals."
+    question: "What industries does Jiyasys work with?",
+    answer: "We work with startups, enterprises, agencies, eCommerce brands, and growing businesses across multiple industries looking for scalable digital transformation solutions."
   },
   {
-    question: "What types of automations does Jiyasys create?",
-    answer: "We build custom intelligent automations, including workflow optimization systems, predictive analytics pipelines, custom AI agents, automated customer support systems, database integrations, and robust cloud scaling pipelines designed to replace manual bottlenecks."
+    question: "What services does Jiyasys provide?",
+    answer: "We specialize in AI product development, SaaS development, web development, mobile app development, automation systems, eCommerce platforms, and UI/UX design."
   },
   {
-    question: "How long does it take to implement an AI automation solution?",
-    answer: "Implementation timelines depend on system complexity. A standard workflow automation or API integration typically takes 3 to 6 weeks, while large-scale custom enterprise AI applications and platforms can take 8 to 12 weeks from concept to deployment."
+    question: "Can Jiyasys build AI-powered products?",
+    answer: "Yes. We develop AI-powered applications, workflow automation systems, AI integrations, intelligent dashboards, and scalable AI solutions tailored to business needs."
   },
   {
-    question: "Do we need existing AI infrastructure to work with Jiyasys?",
-    answer: "No, you do not need any prior AI infrastructure. We construct everything from the ground up—from modern data pipelines and API connectors to custom machine learning models and intuitive user interfaces, integrating directly with your legacy databases."
-  },
-  {
-    question: "How secure are Jiyasys's AI systems?",
-    answer: "Security is built into every layer. We utilize end-to-end encryption, secure cloud architectures (AWS/GCP), and strict compliance standards (GDPR/SOC2 ready), ensuring that your corporate data remains completely secure and isolated at all times."
-  },
-  {
-    question: "What makes Jiyasys different from other AI consultancies?",
-    answer: "Unlike typical consulting companies that only write strategies, we are an engineering-first company. We build production-ready, highly-polished software, modern SaaS platforms, cinematic web experiences, and scalable automation systems that work flawlessly day one."
+    question: "How long does a project take?",
+    answer: "Project timelines depend on complexity, features, and business requirements. We follow agile development methodologies with continuous communication and milestone-based delivery."
   }
 ];
 

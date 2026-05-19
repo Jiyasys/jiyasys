@@ -1,11 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ExternalLink, ArrowLeft } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Header from '../components/Header';
 import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
+import AnimateOnScroll from '../components/AnimateOnScroll';
+import './SoftwareBuildingPage.css';
 import './CaseStudiesPage.css';
 
 export const caseStudies = [
@@ -48,8 +50,10 @@ export const caseStudies = [
 ];
 
 const CaseStudiesPage = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="case-studies-page">
+    <div className="software-page case-studies-page">
       <SEO 
         title="Case Studies" 
         description="Explore our portfolio of successful projects and see how we help businesses grow through technology."
@@ -57,45 +61,87 @@ const CaseStudiesPage = () => {
       <Header />
       
       <main>
-        <section className="case-hero">
-          <div className="container">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-            >
-              Our <span className="highlight">Success Stories</span>
-            </motion.h1>
-            <p className="subtitle">
-              Discover how Jiyasys has helped enterprises across the globe achieve their digital transformation goals.
-            </p>
+        {/* Hero Section */}
+        <section className="sw-hero">
+          <div className="sw-hero-inner">
+
+
+            <AnimateOnScroll animation="fade-up" delay={0.05} className="sw-hero-content">
+              <div className="sw-hero-badge">
+                <span className="sw-badge-dot"></span>
+                Portfolio
+              </div>
+              <h1 className="sw-hero-title">Our Success Stories</h1>
+              <p className="sw-hero-desc">
+                Discover how Jiyasys has helped enterprises across the globe achieve their digital transformation goals.
+              </p>
+            </AnimateOnScroll>
+
+            <div className="sw-hero-visual">
+              <div className="sw-hero-grid-pattern">
+                {Array.from({ length: 36 }).map((_, i) => (
+                  <div key={i} className="sw-grid-dot" style={{ animationDelay: `${i * 0.05}s` }}></div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
-        <section className="cases-grid">
-          <div className="container">
-            <div className="grid">
-              {caseStudies.map((item, idx) => (
-                <motion.div 
-                  key={item.id} 
-                  className="case-card"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.1 }}
-                >
-                  <div className="case-image">
-                    <img src={item.image} alt={item.title} />
-                    <div className="case-category">{item.category}</div>
-                  </div>
-                  <div className="case-content">
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <Link to={`/case-studies/${item.id}`} className="view-btn">
-                      <span>View Case Study</span>
-                      <ExternalLink size={16} />
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
+        {/* Growth/Grid Section */}
+        <section className="sw-growth">
+          <div className="sw-growth-inner">
+            <AnimateOnScroll animation="fade-up" delay={0.1} className="sw-growth-header">
+              <h2 className="sw-growth-title">
+                Fueling Growth Through Bespoke Engineering
+              </h2>
+              <p className="sw-growth-desc">
+                Explore our portfolio of successful projects and see how we help businesses grow through advanced technology and intelligent solutions.
+              </p>
+            </AnimateOnScroll>
+
+            {/* Grid */}
+            <div className="sw-cards-grid">
+              {caseStudies.map((item, idx) => {
+                const id = String(idx + 1).padStart(2, '0');
+                const colors = ['#E11D2E', '#3b5eff', '#ff6b35', '#a855f7'];
+                const accentColor = colors[idx % colors.length];
+                
+                return (
+                  <AnimateOnScroll key={item.id} animation="fade-up" delay={idx * 0.08} className="sw-benefit-card case-card">
+                    <div className="sw-card-accent" style={{ backgroundColor: accentColor }}></div>
+                    
+                    <div className="case-image">
+                      <img src={item.image} alt={item.title} />
+                      <div className="case-category" style={{ borderLeft: `3px solid ${accentColor}` }}>{item.category}</div>
+                    </div>
+                    
+                    <div className="sw-card-header" style={{ marginTop: '16px', marginBottom: '8px' }}>
+                      <span className="sw-card-number">{id}</span>
+                    </div>
+                    
+                    <h3 className="sw-card-title">{item.title}</h3>
+                    <p className="sw-card-desc">{item.description}</p>
+                    
+                    <div className="sw-card-benefit">
+                      <span className="sw-benefit-label" style={{ backgroundColor: accentColor }}>Impact Metrics</span>
+                      <ul style={{ margin: '8px 0 0 0', padding: 0, listStyle: 'none' }}>
+                        {item.stats.map((stat, sIdx) => (
+                          <li key={sIdx} style={{ fontSize: '13.5px', color: '#555', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                            <span style={{ color: accentColor, fontWeight: 'bold', fontSize: '14px' }}>✓</span> {stat}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
+                      <Link to={`/case-studies/${item.id}`} className="view-btn">
+                        <span>View Case Study</span>
+                        <ExternalLink size={16} />
+                      </Link>
+                    </div>
+                  </AnimateOnScroll>
+                );
+              })}
             </div>
           </div>
         </section>

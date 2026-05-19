@@ -1,14 +1,13 @@
 .footer {
   background: #000;
   color: #fff;
-  padding: 100px 0 0;
+  padding: 30px 0 0;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
   gap: 12px;
-  padding-bottom: 80px;
 }
 
 .footer-brand .footer-logo {

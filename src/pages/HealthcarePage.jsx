@@ -4,10 +4,30 @@ import GenericDetail from '../components/GenericDetail';
 
 const HealthcarePage = () => {
   const features = [
-    { title: 'Telemedicine', description: 'Secure video consultation platforms connecting patients and doctors.', icon: Activity },
-    { title: 'EHR Systems', description: 'Electronic Health Record systems with advanced data security and interoperability.', icon: Shield },
-    { title: 'Health Analytics', description: 'Data-driven insights for better patient care and operational efficiency.', icon: Heart },
-    { title: 'Patient Portals', description: 'User-friendly portals for appointment booking and medical history access.', icon: Users }
+    { 
+      title: 'Telemedicine', 
+      description: 'Secure video consultation platforms connecting patients and doctors.', 
+      icon: Activity,
+      benefit: 'Expand patient outreach beyond geographical boundaries, reduce clinic wait times, and offer convenient 24/7 care.' 
+    },
+    { 
+      title: 'EHR Systems', 
+      description: 'Electronic Health Record systems with advanced data security and interoperability.', 
+      icon: Shield,
+      benefit: 'Improve data accuracy, streamline clinical workflows, and ensure 100% HIPAA compliance and patient privacy.' 
+    },
+    { 
+      title: 'Health Analytics', 
+      description: 'Data-driven insights for better patient care and operational efficiency.', 
+      icon: Heart,
+      benefit: 'Deliver highly personalized treatment plans and optimize hospital resource allocation through predictive metrics.' 
+    },
+    { 
+      title: 'Patient Portals', 
+      description: 'User-friendly portals for appointment booking and medical history access.', 
+      icon: Users,
+      benefit: 'Drastically increase patient engagement and reduce administrative workloads by automating appointment bookings.' 
+    }
   ];
 
   return (

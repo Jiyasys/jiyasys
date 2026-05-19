@@ -32,6 +32,7 @@ import CloudServicesPage from './pages/CloudServicesPage';
 import CybersecurityPage from './pages/CybersecurityPage';
 import UIUXDesignPage from './pages/UIUXDesignPage';
 import HireDeveloperPage from './pages/HireDeveloperPage';
+import ProjectsPage from './pages/ProjectsPage';
 
 // Industry Pages
 import FintechPage from './pages/FintechPage';
@@ -97,6 +98,7 @@ function App() {
       <Route path="/ui-ux-design" element={<UIUXDesignPage />} />
       <Route path="/hire-developers" element={<HireDeveloperPage />} />
       <Route path="/service/:id" element={<ServiceDetailPage />} />
+      <Route path="/projects" element={<ProjectsPage />} />
       
       {/* Industry Routes */}
       <Route path="/industry/fintech" element={<FintechPage />} />

@@ -3,6 +3,7 @@ import { ArrowLeft, MapPin, Utensils, Music } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import SEO from '../components/SEO';
+import AnimateOnScroll from '../components/AnimateOnScroll';
 import './MobileAppBuildingPage.css';
 
 const benefitCards = [
@@ -37,17 +38,18 @@ const MobileAppBuildingPage = () => {
 
   return (
     <div className="software-page mobile-page">
+      <SEO 
+        title="Mobile App Development Services" 
+        description="High-performance native and cross-platform mobile experiences that place your business operations right into the pockets of your customers."
+      />
       <Header />
 
       {/* Hero Section */}
       <section className="sw-hero">
         <div className="sw-hero-inner">
-          <button className="sw-back-btn" onClick={() => navigate('/')}>
-            <ArrowLeft size={18} />
-            <span>Back</span>
-          </button>
 
-          <div className="sw-hero-content">
+
+          <AnimateOnScroll animation="fade-up" delay={0.05} className="sw-hero-content">
             <div className="sw-hero-badge">
               <span className="sw-badge-dot"></span>
               Mobile App Building
@@ -56,7 +58,7 @@ const MobileAppBuildingPage = () => {
             <p className="sw-hero-desc">
               High-performance native and cross-platform mobile experiences that place your business operations right into the pockets of your customers.
             </p>
-          </div>
+          </AnimateOnScroll>
 
           <div className="sw-hero-visual">
             <div className="sw-hero-grid-pattern">
@@ -71,19 +73,19 @@ const MobileAppBuildingPage = () => {
       {/* Growth Section */}
       <section className="sw-growth">
         <div className="sw-growth-inner">
-          <div className="sw-growth-header">
+          <AnimateOnScroll animation="fade-up" delay={0.1} className="sw-growth-header">
             <h2 className="sw-growth-title">
               How Our Mobile App Building Fuels Growth
             </h2>
             <p className="sw-growth-desc">
               We leverage the latest technology stacks to build highly bespoke solutions. Here is a look at what we construct and the immediate business advantages they provide.
             </p>
-          </div>
+          </AnimateOnScroll>
 
           {/* Benefit Cards */}
           <div className="sw-cards-grid">
-            {benefitCards.map((card) => (
-              <div key={card.id} className="sw-benefit-card">
+            {benefitCards.map((card, idx) => (
+              <AnimateOnScroll key={card.id} animation="fade-up" delay={idx * 0.08} className="sw-benefit-card">
                 <div className="sw-card-accent" style={{ backgroundColor: card.accentColor }}></div>
                 <div className="sw-card-header">
                   <div className="sw-card-icon-wrap" style={{ backgroundColor: `${card.accentColor}15` }}>
@@ -94,10 +96,10 @@ const MobileAppBuildingPage = () => {
                 <h3 className="sw-card-title">{card.title}</h3>
                 <p className="sw-card-desc">{card.description}</p>
                 <div className="sw-card-benefit">
-                  <span className="sw-benefit-label">Benefit</span>
+                  <span className="sw-benefit-label" style={{ backgroundColor: card.accentColor }}>Benefit</span>
                   <p className="sw-benefit-text">{card.benefit}</p>
                 </div>
-              </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

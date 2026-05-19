@@ -88,7 +88,7 @@ const Header = () => {
         {
           title: 'Connect',
           items: [
-            { name: 'Our Experts', path: '/experts' },
+            { name: 'Projects', path: '/projects' },
             { name: 'Careers', path: '/careers' }
           ]
         }
@@ -159,6 +159,15 @@ const Header = () => {
       </div>
 
       <nav className={`header-nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+        <div className="mobile-nav-header">
+          <Link to="/" className="logo" onClick={() => setMobileMenuOpen(false)}>
+            <img src="https://www.jiyasys.com/logo.png" alt="Jiyasys Logo" className="jiyasys-logo" />
+          </Link>
+          <button className="mobile-close-btn" onClick={toggleMobileMenu}>
+            <X size={24} />
+          </button>
+        </div>
+
         <ul className="nav-list">
           <li
             className={`nav-item ${activeMenu === 'company' ? 'active' : ''}`}
@@ -239,6 +248,10 @@ const Header = () => {
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
+
+      {mobileMenuOpen && (
+        <div className="mobile-nav-overlay" onClick={toggleMobileMenu}></div>
+      )}
     </header>
   );
 };

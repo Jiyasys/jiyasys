@@ -252,7 +252,7 @@
   background-color: var(--primary-red);
   color: #fff;
   padding: 12px 32px;
-  border-radius: var(--radius-btn);
+  /* border-radius: var(--radius-btn); */
   font-size: 16px;
   font-weight: 700;
   display: flex;
