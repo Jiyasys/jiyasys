@@ -85,8 +85,27 @@
 
 .footer-contact li {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.footer-contact li svg {
+  margin-top: 2px;
+  flex-shrink: 0;
+  color: var(--primary-red);
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-address {
+  font-size: 13px;
+  opacity: 0.75;
+  line-height: 1.5;
 }
 
 .footer-contact .icon {

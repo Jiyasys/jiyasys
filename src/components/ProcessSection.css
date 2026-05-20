@@ -1,6 +1,7 @@
 .process-scroll-container {
   background-color: var(--bg-beige);
-  height: 300vh; /* Provides scroll space for the sequential animation */
+  height: 300vh;
+  /* Provides scroll space for the sequential animation */
   position: relative;
 }
 
@@ -18,7 +19,7 @@
 .process-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  gap: 2px;
   max-width: 1400px;
   margin: 0 auto;
   align-items: flex-start;
@@ -38,7 +39,7 @@
   justify-content: space-between;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .card-top {
@@ -53,13 +54,14 @@
 }
 
 .card-title {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 600;
   letter-spacing: -1px;
+  margin-top: 25px;
 }
 
 .card-description {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
   z-index: 2;
 }
@@ -89,14 +91,14 @@
 
 .card-bg-number {
   position: absolute;
-  top: -20px;
-  right: -10px;
-  font-size: 200px;
-  font-weight: 900;
+  top: 8px;
+  right: 17px;
+  font-size: 67px;
+  font-weight: 600;
   line-height: 1;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.8;
+  opacity: 1.02;
 }
 
 @media (max-width: 1024px) {
@@ -119,12 +121,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
-  
+
   .process-card-col {
     transform: none !important;
     height: auto;
   }
-  
+
   .process-card {
     height: auto;
     min-height: 380px;
@@ -140,7 +142,7 @@
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .process-card {
     height: auto;
     min-height: 320px;

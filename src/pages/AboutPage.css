@@ -1,6 +1,11 @@
+/* -------------------------------------------------------------
+   JIYASYS ABOUT PAGE DESIGN SYSTEM
+   ------------------------------------------------------------- */
+
 .about-page {
-  background-color: #ffffff;
+  background-color: var(--bg-white);
   min-height: 100vh;
+  color: var(--text-dark);
 }
 
 .about-main-content {
@@ -8,42 +13,240 @@
 }
 
 .about-container-modern {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-/* About Modern Section */
-.about-section-modern {
-  padding: 50px 0 80px;
-  border-bottom: 1px solid #e5e7eb;
+/* 1. Hero Section */
+.about-hero-section {
+  padding: 40px 0;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
 }
 
-.about-section-modern .about-container-modern {
-  display: flex;
+.about-hero-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-red);
+  margin-bottom: 24px;
+}
+
+.about-hero-title {
+  font-family: var(--font-heading);
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: var(--text-dark);
+  max-width: 1100px;
+  margin: 0 0 48px 0;
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
   gap: 80px;
+  align-items: start;
 }
 
-/* Left Column */
-.about-left-col {
-  flex: 0 0 520px;
+.about-hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.about-hero-description {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* 2. Intro Section */
+.about-intro-section {
+  padding: 40px 0;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-intro-heading {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.about-intro-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-intro-paragraph {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.about-intro-paragraph.highlight {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+/* 3. Core Values Section */
+.core-values-section {
+  padding: 50px 0;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-title-wrapper {
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.section-label {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-red);
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.value-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.35s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-red);
+}
+
+.value-num {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--primary-red);
+  letter-spacing: 1px;
+}
+
+.value-card h3 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.value-card p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* 4. How We Work Section */
+.how-we-work-section {
+  padding: 50px 0;
+  background-color: var(--bg-white);
+}
+
+.grid-work {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.work-left {
+  position: sticky;
+  top: 100px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 24px;
 }
 
-.about-badge-modern {
-  background-color: #f9fafb;
-  padding: 14px 20px;
-  display: inline-flex;
+.work-heading {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.work-paragraph {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.work-trust-wrapper {
+  display: flex;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 32px;
-  border: 1px solid #e5e7eb;
-  max-width: 460px;
+  background-color: var(--bg-white);
+  padding: 16px 20px;
+  border-left: 3px solid var(--primary-red);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
 }
 
-.badge-dot {
+.trust-dot-red {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -52,170 +255,135 @@
   flex-shrink: 0;
 }
 
-.badge-text {
+.work-trust-line {
   font-size: 13px;
   line-height: 1.45;
-  color: var(--text-dark);
-  font-weight: 500;
-  margin: 0;
-  opacity: 0.9;
-}
-
-.about-heading-modern {
-  font-family: var(--font-heading);
-  font-size: 48px;
-  font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -1.5px;
+  font-weight: 400;
   color: var(--text-dark);
   margin: 0;
 }
 
-/* Right Column */
-.about-right-col {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  /* padding-top: 96px; */
-  /* Align beautifully with the bottom of the badge / heading top */
-}
-
-.desc-paragraph {
+.work-cta-btn {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 14px 32px;
+  border: none;
   font-size: 15px;
-  line-height: 1.65;
-  color: var(--text-dark);
-  opacity: 0.8;
-  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.highlight-desc {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.55;
-  opacity: 1;
-  color: var(--text-dark);
+.work-cta-btn:hover {
+  background-color: var(--primary-red);
+  transform: translateY(-2px);
 }
 
-/* Mission & Vision Modernized */
-.mission-vision-modern {
-  padding: 15px 0;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.grid-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-.mv-card {
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
-  padding: 36px;
+.work-right {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.mv-card:hover {
-  transform: translateY(-4px);
+.work-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.work-step-item {
+  display: flex;
+  gap: 24px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  padding: 32px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.work-step-item:hover {
   border-color: var(--primary-red);
+  transform: translateY(-2px);
 }
 
-.mv-card-header {
+.step-number-box {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
 }
 
-.mv-card-icon {
-  font-size: 18px;
-  font-weight: bold;
+.step-number {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 400;
   color: var(--primary-red);
 }
 
-.mv-card h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin: 0;
-}
-
-.mv-card p {
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--text-dark);
-  opacity: 0.8;
-  margin: 0;
-}
-
-/* Minimal Stats Grid */
-.stats-section-modern {
-  padding: 80px 0 120px;
-}
-
-.stats-grid-modern {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.stat-card-modern {
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
-  padding: 30px 20px;
-  text-align: center;
+.step-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  transition: transform 0.3s ease;
 }
 
-.stat-card-modern:hover {
-  transform: translateY(-4px);
-}
-
-.stat-number-modern {
+.step-content h3 {
   font-family: var(--font-heading);
-  font-size: 40px;
-  font-weight: 600;
-  color: var(--primary-red);
-  line-height: 1;
-}
-
-.stat-label-modern {
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 20px;
+  font-weight: 400;
   color: var(--text-dark);
-  opacity: 0.7;
+  margin: 0;
+  letter-spacing: -0.5px;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .about-section-modern {
-    padding: 120px 0 60px;
+.step-content p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* -------------------------------------------------------------
+   RESPONSIVE DESIGN MEDIA QUERIES
+   ------------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+  .about-hero-title {
+    font-size: 46px;
   }
 
-  .about-section-modern .about-container-modern {
-    flex-direction: column;
+  .about-hero-grid,
+  .about-intro-grid,
+  .grid-work {
     gap: 40px;
   }
 
-  .about-left-col {
-    flex: none;
-    max-width: 100%;
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .about-hero-grid,
+  .about-intro-grid,
+  .grid-work {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  .about-right-col {
-    padding-top: 0;
+  .work-left {
+    position: relative;
+    top: auto;
   }
 
-  .about-heading-modern {
-    font-size: 38px;
+  .about-hero-section,
+  .about-intro-section,
+  .core-values-section,
+  .how-we-work-section {
+    padding: 60px 0;
   }
 }
 
@@ -224,26 +392,32 @@
     padding: 0 20px;
   }
 
-  .about-badge-modern {
-    padding: 12px 16px;
+  .about-hero-title {
+    font-size: 36px;
     margin-bottom: 24px;
   }
 
-  .about-heading-modern {
+  .about-intro-heading {
+    font-size: 28px;
+  }
+
+  .section-heading,
+  .work-heading {
     font-size: 32px;
   }
 
-  .grid-split {
+  .values-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 20px;
   }
 
-  .stats-grid-modern {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+  .value-card,
+  .work-step-item {
+    padding: 24px;
   }
 
-  .stat-number-modern {
-    font-size: 32px;
+  .work-step-item {
+    flex-direction: column;
+    gap: 16px;
   }
 }

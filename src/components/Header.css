@@ -1,8 +1,8 @@
 .header {
   display: flex;
-  height: 45px;
+  height: 53px;
   border-bottom: 1px solid var(--border-color);
-  background-color: var(--bg-white);
+  background-color: white;
   align-items: stretch;
   position: sticky;
   top: 0;
@@ -34,7 +34,7 @@
 }
 
 .jiyasys-logo {
-  max-height: 32px;
+  max-height: 50px;
   width: auto;
   object-fit: contain;
 }
@@ -49,7 +49,7 @@
 .header-center {
   padding: 0 30px;
   flex: 1;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .location-info {
@@ -347,9 +347,11 @@
   background-color: #c41928;
   transform: scale(1.02);
 }
+
 .mobile-nav-header {
   display: none;
 }
+
 .mobile-nav-overlay {
   display: none;
 }
@@ -414,8 +416,13 @@
   }
 
   @keyframes fadeInOverlay {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
   .header-nav {

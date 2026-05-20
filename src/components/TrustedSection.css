@@ -1,26 +1,32 @@
 .trusted-section {
   background-color: var(--bg-white);
-  padding: 12px 40px;
+  padding: 30px;
   overflow-x: hidden;
   max-width: 100vw;
 }
 
-.trusted-title-row {
+.trusted-top {
   max-width: 1400px;
-  margin: 0 auto 60px;
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-light);
+}
+
+.trusted-title-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  padding: 40px 40px 24px;
   border-bottom: 1px solid var(--border-color);
 }
 
 .trusted-main-title {
   font-family: var(--font-heading);
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -1.5px;
   color: var(--text-dark);
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 
 .trusted-sub-text {
@@ -28,18 +34,15 @@
   color: var(--text-muted);
   max-width: 450px;
   line-height: 1.6;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 /* Seamless Infinite Marquee */
 .marquee-wrapper {
-  padding: 23px 0;
-  border-bottom: 1px solid var(--border-color);
-  margin-bottom: 12px;
+  padding: 24px 40px;
   overflow: hidden;
   position: relative;
   width: 100%;
-  max-width: 100vw;
 }
 
 .marquee-track {
@@ -141,7 +144,7 @@
 .tagline-badge {
   font-family: var(--font-heading);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -156,7 +159,7 @@
 .tagline-label {
   font-family: var(--font-heading);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary-red);
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -177,7 +180,7 @@
 .tagline-sep {
   color: var(--primary-red);
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .tagline-footer {
@@ -209,7 +212,7 @@
 .info-heading {
   font-family: var(--font-heading);
   font-size: 42px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.15;
   letter-spacing: -1.5px;
   color: var(--text-dark);
@@ -233,7 +236,7 @@
 .bold-callout {
   font-family: var(--font-heading);
   font-size: 26px;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-dark);
   letter-spacing: -1px;
   border-left: 4px solid var(--primary-red);
@@ -254,7 +257,7 @@
   padding: 12px 32px;
   /* border-radius: var(--radius-btn); */
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -300,6 +303,11 @@
   .trusted-title-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 16px;
+    padding: 24px 20px 16px;
+  }
+
+  .marquee-wrapper {
+    padding: 16px 20px;
   }
 }

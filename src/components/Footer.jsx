@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Globe, Share2, Users } from 'lucide-react';
+import logoImg from '../assets/Jiyasys_logo.jpg.jpeg';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,8 +9,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <img src="https://www.jiyasys.com/logo.png" alt="Jiyasys" className="footer-logo" />
-          <p>Jiyasys an AI-first driven company focused on building intelligent, scalable, and immersive digital experiences. We specialize in AI product development, animated & cinematic websites, SaaS platforms, and intelligent automation systems. At Jiyasys, we don’t just develop software we create meaningful user journeys where technology feels seamless, thoughtful, and future-ready.</p>
+          <img src={logoImg} alt="Jiyasys" className="footer-logo" />
+          <p>Jiyasys an AI-first driven company focused on building intelligent, scalable, and immersive digital experiences. We specialize in AI product development, animated &amp; cinematic websites, SaaS platforms, and intelligent automation systems. At Jiyasys, we don't just develop software we create meaningful user journeys where technology feels seamless, thoughtful, and future-ready.</p>
           <div className="social-links">
             <a href="https://www.jiyasys.com/" target="_blank" rel="noopener noreferrer"><Globe size={20} /></a>
             <a href="https://www.jiyasys.com/" target="_blank" rel="noopener noreferrer"><Share2 size={20} /></a>
@@ -20,7 +21,7 @@ const Footer = () => {
         <div className="footer-links">
           <h4>Services</h4>
           <ul>
-            <li><Link to="/service/01">AI & Automation</Link></li>
+            <li><Link to="/service/01">AI &amp; Automation</Link></li>
             <li><Link to="/service/02">SaaS Development</Link></li>
             <li><Link to="/service/03">Web Development</Link></li>
             <li><Link to="/service/04">Mobile Apps</Link></li>
@@ -46,12 +47,28 @@ const Footer = () => {
         <div className="footer-contact">
           <h4>Contact</h4>
           <ul>
-            <li><Mail size={16} /> contact@jiyasys.com</li>
-            <li><Phone size={16} /> +91 123 456 7890</li>
-            <li><MapPin size={16} /> Rajasthan, India</li>
+            <li>
+              <Mail size={16} />
+              <div className="contact-detail">
+                <span>hello@jiyasys.com</span>
+              </div>
+            </li>
+            <li>
+              <Phone size={16} />
+              <div className="contact-detail">
+                <span>9929818236</span>
+              </div>
+            </li>
+            <li>
+              <MapPin size={16} />
+              <div className="contact-detail">
+                <span className="footer-address">BAsement RV Tower, Nihryanand Nagar, Vaishali Nagar, Jaipur, Rajasthan 302021</span>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
+
       <div className="footer-bottom">
         <div className="container">
           <p>&copy; 2026 Jiyasys. All rights reserved. | <Link to="/privacy">Privacy Policy</Link></p>

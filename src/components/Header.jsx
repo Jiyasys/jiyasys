@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Code, Smartphone, Cpu, BarChart, Users, Globe, Rocket, Shield, Cloud, Sun, Moon, Menu, X } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import logoImg from '../assets/Jiyasys_logo.jpg.jpeg';
 import './Header.css';
 
 const Header = () => {
@@ -106,10 +107,21 @@ const Header = () => {
         {
           title: 'Sectors',
           items: [
-            { name: 'Fintech', path: '/industry/fintech' },
             { name: 'Healthcare', path: '/industry/healthcare' },
-            { name: 'E-commerce', path: '/industry/ecommerce' },
-            { name: 'Edtech', path: '/industry/edtech' }
+            { name: 'Fitness', path: '/industry/fitness' },
+            { name: 'Finance', path: '/industry/finance' },
+            { name: 'Education', path: '/industry/education' },
+            { name: 'Real Estate', path: '/industry/real-estate' }
+          ]
+        },
+        {
+          title: '',
+          items: [
+            { name: 'Travel', path: '/industry/travel' },
+            { name: 'Transport', path: '/industry/transport' },
+            { name: 'Retail', path: '/industry/retail' },
+            { name: 'Ecommerce', path: '/industry/ecommerce' },
+            { name: 'Jewellery', path: '/industry/jewellery' }
           ]
         }
       ],
@@ -147,7 +159,7 @@ const Header = () => {
     <header className="header" onMouseLeave={() => setActiveMenu(null)}>
       <div className="header-left">
         <Link to="/" className="logo">
-          <img src="https://www.jiyasys.com/logo.png" alt="Jiyasys Logo" className="jiyasys-logo" />
+          <img src={logoImg} alt="Jiyasys Logo" className="jiyasys-logo" />
         </Link>
       </div>
 
@@ -162,7 +174,7 @@ const Header = () => {
       <nav className={`header-nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
         <div className="mobile-nav-header">
           <Link to="/" className="logo" onClick={() => setMobileMenuOpen(false)}>
-            <img src="https://www.jiyasys.com/logo.png" alt="Jiyasys Logo" className="jiyasys-logo" />
+            <img src={logoImg} alt="Jiyasys Logo" className="jiyasys-logo" />
           </Link>
           <button className="mobile-close-btn" onClick={toggleMobileMenu}>
             <X size={24} />

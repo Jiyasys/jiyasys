@@ -42,6 +42,14 @@ import FintechPage from './pages/FintechPage';
 import HealthcarePage from './pages/HealthcarePage';
 import EcommerceIndustryPage from './pages/EcommerceIndustryPage';
 import EdtechIndustryPage from './pages/EdtechIndustryPage';
+import FitnessIndustryPage from './pages/FitnessIndustryPage';
+import FinanceIndustryPage from './pages/FinanceIndustryPage';
+import EducationIndustryPage from './pages/EducationIndustryPage';
+import RealEstateIndustryPage from './pages/RealEstateIndustryPage';
+import TravelIndustryPage from './pages/TravelIndustryPage';
+import TransportIndustryPage from './pages/TransportIndustryPage';
+import RetailIndustryPage from './pages/RetailIndustryPage';
+import JewelleryIndustryPage from './pages/JewelleryIndustryPage';
 
 // Tech Pages
 import ReactTechPage from './pages/ReactTechPage';
@@ -111,6 +119,14 @@ function App() {
       <Route path="/industry/healthcare" element={<HealthcarePage />} />
       <Route path="/industry/ecommerce" element={<EcommerceIndustryPage />} />
       <Route path="/industry/edtech" element={<EdtechIndustryPage />} />
+      <Route path="/industry/fitness" element={<FitnessIndustryPage />} />
+      <Route path="/industry/finance" element={<FinanceIndustryPage />} />
+      <Route path="/industry/education" element={<EducationIndustryPage />} />
+      <Route path="/industry/real-estate" element={<RealEstateIndustryPage />} />
+      <Route path="/industry/travel" element={<TravelIndustryPage />} />
+      <Route path="/industry/transport" element={<TransportIndustryPage />} />
+      <Route path="/industry/retail" element={<RetailIndustryPage />} />
+      <Route path="/industry/jewellery" element={<JewelleryIndustryPage />} />
 
       {/* Tech Routes */}
       <Route path="/tech/react" element={<ReactTechPage />} />

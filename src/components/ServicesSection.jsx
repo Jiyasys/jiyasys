@@ -42,7 +42,6 @@ const ServicesSection = () => {
               </div>
 
               <div className="service-media-modern">
-                <span className="service-number-modern">{service.id}</span>
                 <img src={service.image} alt={service.title} className="service-image-modern" />
               </div>
             </div>

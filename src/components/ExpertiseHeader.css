@@ -1,6 +1,6 @@
 .expertise-section {
   background-color: var(--bg-white);
-  padding: 12px 40px 12px;
+  padding: 38px 38px 0px;
 }
 
 @media (max-width: 768px) {
@@ -18,7 +18,7 @@
 .expertise-title {
   font-family: var(--font-heading);
   font-size: 56px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -2.5px;
   color: var(--text-dark);
