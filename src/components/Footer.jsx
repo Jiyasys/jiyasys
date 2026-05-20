@@ -62,7 +62,7 @@ const Footer = () => {
             <li>
               <MapPin size={16} />
               <div className="contact-detail">
-                <span className="footer-address">BAsement RV Tower, Nihryanand Nagar, Vaishali Nagar, Jaipur, Rajasthan 302021</span>
+                <span className="footer-address">Basement RV Tower, Nihryanand Nagar, Vaishali Nagar, Jaipur, Rajasthan 302021</span>
               </div>
             </li>
           </ul>
