@@ -127,15 +127,15 @@
 /* Mega Menu Styles */
 .mega-menu-overlay {
   position: fixed;
-  top: 44px;
+  top: 64px;
   left: 0;
   width: 100vw;
-  height: calc(116vh - 64px);
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(14px);
   z-index: 999;
-  animation: fadeIn 0.4s ease;
+  animation: fadeIn 0.9s ease;
 }
 
 @keyframes fadeIn {
