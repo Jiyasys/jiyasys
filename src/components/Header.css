@@ -182,12 +182,12 @@
 }
 
 .mega-menu-columns {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 12px 40px;
+  max-width: 1295px;
+  margin: 0px -13px;
+  padding: 14px 44px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: -10px;
   width: 100%;
 }
 

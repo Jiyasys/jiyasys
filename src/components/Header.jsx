@@ -140,7 +140,12 @@ const Header = () => {
             { name: 'AI Product Development & Automation', path: '/service/01' },
             { name: 'SaaS Product Development', path: '/service/02' },
             { name: 'Web Development', path: '/service/03' },
-            { name: 'Mobile App Development', path: '/service/04' },
+            { name: 'Mobile App Development', path: '/service/04' }
+          ]
+        },
+        {
+          title: '',
+          items: [
             { name: 'UI/UX Design', path: '/service/05' },
             { name: 'ECommerce Development', path: '/service/06' },
             { name: 'Animated & Cinematic Website Experiences', path: '/service/07' }
@@ -199,9 +204,6 @@ const Header = () => {
             <span>Industries</span>
             <ChevronDown size={14} className={`chevron ${activeMenu === 'industries' ? 'rotate' : ''}`} />
           </li>
-          <li className="nav-item">
-            <Link to="/case-studies" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
-          </li>
           <li
             className={`nav-item ${activeMenu === 'services' ? 'active' : ''}`}
             onMouseEnter={() => !mobileMenuOpen && setActiveMenu('services')}
@@ -209,6 +211,9 @@ const Header = () => {
           >
             <span>Services</span>
             <ChevronDown size={14} className={`chevron ${activeMenu === 'services' ? 'rotate' : ''}`} />
+          </li>
+          <li className="nav-item">
+            <Link to="/case-studies" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
           </li>
         </ul>
 
