@@ -94,7 +94,7 @@
   flex: 0 0 calc(50% - 40px);
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
+  padding: 0;
 }
 
 .portfolio-title {
@@ -102,6 +102,7 @@
   /* Reduced from 40px */
   font-weight: 500;
   color: #111;
+  margin-top: -5px; /* Slight negative margin to account for line-height spacing and perfectly align text top with image */
   margin-bottom: 16px;
   /* Reduced from 24px */
   letter-spacing: -0.5px;
